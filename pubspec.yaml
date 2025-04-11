@@ -1,0 +1,35 @@
+name: chore_battle
+description: A gamified chore management app
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  
+  # Firebase
+  firebase_core: ^2.27.1
+  firebase_storage: ^11.6.10
+  
+  # Authentication
+  google_sign_in: ^6.2.1
+  
+  # Storage and preferences
+  shared_preferences: ^2.2.2
+  
+  # UI and utilities
+  image_picker: ^1.0.7
+  flutter_svg: ^2.0.10+1
+  flutter_local_notifications: ^16.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true 
