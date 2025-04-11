@@ -2,6 +2,8 @@
 
 A gamified chore management app built with Flutter and GetX.
 
+> **Note**: This is a private repository. Access is limited to authorized contributors only.
+
 ## Features
 
 - Gamified chore management system
@@ -22,6 +24,90 @@ A gamified chore management app built with Flutter and GetX.
 - **Google Sign In**: Authentication
 - **Local Storage**: Shared Preferences
 
+## Project Structure
+
+The project follows a clean, modular architecture with clear separation of concerns:
+
+```
+lib/
+├── controllers/     # GetX controllers for state management
+├── models/         # Data models and business logic entities
+├── views/          # UI screens and widgets
+├── routes/         # GetX route management and navigation
+├── services/       # Business logic and external service integration
+└── utils/          # Helper functions and utilities
+```
+
+### Directory Structure Explanation
+
+- **controllers/**: Contains GetX controllers that manage the state and business logic of the app. Each controller is responsible for a specific feature or screen.
+- **models/**: Houses data models that represent the core entities of the application (users, chores, rewards, etc.).
+- **views/**: Contains all UI-related code, organized by feature. Each screen has its own directory with associated widgets.
+- **routes/**: Manages navigation and routing using GetX, making it easy to navigate between screens while maintaining state.
+- **services/**: Handles external service integration (Firebase, local storage) and complex business logic.
+- **utils/**: Contains reusable utility functions, constants, and helper classes.
+
+## Version Control
+
+This project uses Git for version control. The repository is structured to:
+- Track all source code changes
+- Ignore build artifacts and sensitive files (see `.gitignore`)
+- Maintain empty directories using `.gitkeep` files
+- Follow Git best practices for Flutter development
+
+### Branching Strategy
+
+We follow a modified Git Flow workflow with the following branches:
+
+#### Main Branches
+- `master` - Production-ready code
+- `develop` - Main development branch, feature branches merge here
+
+#### Supporting Branches
+- `feature/*` - New features and non-emergency bug fixes
+- `bugfix/*` - Bug fixes for develop branch
+- `hotfix/*` - Emergency production fixes
+- `release/*` - Release preparation
+
+### Branch Naming Convention
+- Feature branches: `feature/feature-name`
+- Bug fixes: `bugfix/bug-name`
+- Hotfixes: `hotfix/issue-name`
+- Releases: `release/version-number`
+
+### Workflow Rules
+1. **Feature Development**
+   - Create from: `develop`
+   - Merge back into: `develop`
+   - Naming: `feature/feature-name`
+
+2. **Bug Fixes**
+   - Create from: `develop`
+   - Merge back into: `develop`
+   - Naming: `bugfix/bug-name`
+
+3. **Hotfixes**
+   - Create from: `master`
+   - Merge back into: `master` and `develop`
+   - Naming: `hotfix/issue-name`
+
+4. **Releases**
+   - Create from: `develop`
+   - Merge back into: `master` and `develop`
+   - Naming: `release/version-number`
+
+### Commit Guidelines
+- Use clear, descriptive commit messages
+- Start with a verb in imperative mood (e.g., "Add", "Fix", "Update")
+- Reference issue numbers when applicable
+- Keep commits focused and atomic
+
+### Pull Request Process
+1. Create PR from your feature branch to `develop`
+2. Ensure tests pass and code is reviewed
+3. Squash and merge when approved
+4. Delete feature branch after merge
+
 ## Getting Started
 
 ### Prerequisites
@@ -34,9 +120,9 @@ A gamified chore management app built with Flutter and GetX.
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository (requires access):
 ```bash
-git clone https://github.com/yourusername/chore_battle.git
+git clone https://github.com/CloudTigerx/ChoreBattle.git
 ```
 
 2. Navigate to the project directory:
@@ -59,18 +145,6 @@ flutter pub get
 5. Run the app:
 ```bash
 flutter run
-```
-
-## Project Structure
-
-```
-lib/
-├── controllers/     # GetX controllers
-├── models/         # Data models
-├── views/          # UI screens
-├── routes/         # GetX routes
-├── services/       # Business logic
-└── utils/          # Helper functions
 ```
 
 ## Dependencies
